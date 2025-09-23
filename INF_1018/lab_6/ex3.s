@@ -63,7 +63,7 @@ loop:
     and $0x01, %ecx
 
     cmpl $0, %ecx
-    jne notcond           /* ((*p % 2) == 0) */
+    jne              /* ((*p % 2) == 0) */
     
     /* printf("%d\n", *p); */
     movl   (%r12), %esi    # carrega *p em %esi (segundo argumento)
