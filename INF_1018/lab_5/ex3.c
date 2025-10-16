@@ -31,13 +31,15 @@ struct X5 {
 
 
 struct X6 {
-  short s1; //16 17
-  //padding 2 //18 19
-  int i; //20 21 22 23 24
-  char c[3];//25 26 27
-  //padding 1 // 28
-  short s2; // 29 30
+  short s1;   // offset 0-1 (2 bytes)
+  //padding   // offset 2-3 (2 bytes) ← padding para alinhar o int
+  int i;      // offset 4-7 (4 bytes) ← precisa estar em múltiplo de 4!
+  char c[3];  // offset 8-10 (3 bytes)
+  //padding   // offset 11 (1 byte) ← padding para alinhar s2
+  short s2;   // offset 12-13 (2 bytes) ← precisa estar em múltiplo de 2!
+  //padding   // offset 14-15 (2 bytes) ← padding final da struct!
 };
+// Tamanho total: 16 bytes
 
 union U1 {
   int i;
