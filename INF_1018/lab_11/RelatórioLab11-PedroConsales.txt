@@ -27,4 +27,4 @@ Após preencher o array, preparei os parâmetros para chamar addl: %r12 (endere�
 e 4 vai para %esi. Depois da chamada, restaurei todos os registradores callee-saved salvos no RA e 
 finalizei a função (o valor de retorno já estava correto em %eax).
 A função efetivamente cria um array local de 4 inteiros, preenche todos com o valor recebido como parâmetro,
- e retorna a soma de todos os elementos (que será 4 × num).
+e retorna a soma de todos os elementos (que será 4 × num).
